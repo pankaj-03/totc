@@ -1,0 +1,667 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --primary: #49BBBD
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.header {
+    padding: 0 4.8rem;
+    height: 8rem;
+    /* position: fixed; */
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+}
+
+.header .logo {
+    height: 6rem;
+}
+
+.navbar {
+    width: 50%;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    font-size: 2rem;
+    color: #5B5B5B;
+}
+
+#navbar-end {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#navbar-end img {
+    width: 35px;
+    height: 35px;
+}
+
+#navbar-end p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+.navbar-link:link,
+.navbar-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    transition: all 0.3s;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    color: black;
+    cursor: pointer;
+}
+
+
+.mobile-navbar-btn {
+    display: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.mobile-navbar-btn [name="close-list"] {
+    display: none;
+}
+
+.mobile-navbar-btn svg {
+    height: 4rem;
+    width: 4rem;
+}
+
+
+/* RESPONSIVE CODES FOR HEADER SECTION */
+
+@media(max-width: 768px) {
+    .mobile-navbar-btn {
+        display: block;
+        z-index: 999;
+        border: 3px solid white;
+        margin-right: 50px;
+    }
+
+
+
+    .navbar {
+        /* display: none; */
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: all 0.3s linear;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+    }
+
+
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .active .navbar {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        z-index: 100;
+    }
+
+    .active .mobile-navbar-btn [name="close-list"] {
+        display: block;
+
+    }
+
+    .active .mobile-navbar-btn [name="menu-list"] {
+        display: none;
+
+    }
+
+
+}
+
+@media(max-width: 350px) {
+    .header {
+        padding: 0 2.4rem;
+
+    }
+}
+
+        /* MAIN-SECTION */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    color: var(--primary);
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 4rem;
+    padding: 2rem;
+}
+
+.primary-btn {
+    outline: none;
+    padding: 0.8em;
+    border-radius: 0.6em;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--primary);
+    color: white;
+}
+
+.secondary-btn {
+    border: solid #ababab45 2px;
+    outline: none;
+    padding: 0.8em;
+    border-radius: 0.6em;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.membership-card {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    flex-wrap: wrap;
+}
+
+.card-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25rem; 
+    padding: 2rem;
+    width: 18em;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+.main-title {
+    font-weight: bold;
+}
+
+.min-title {
+    font-size: 0.35em;
+    text-transform: uppercase;
+}
+
+.small-title {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: bold;
+
+
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1.5reml
+}
+
+.card-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    /* font-weight: 500; */
+}
+
+.card1-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 201, 201);
+    padding: 5px;
+    width: 1em;
+    height: 1em;
+    font-size: 10px;
+    border-radius: 50%;
+}
+
+.card3-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 220, 81);
+    padding: 5px;
+    width: 1em;
+    height: 1em;
+    font-size: 10px;
+    border-radius: 50%;
+}
+
+.card2-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #49bbbd91;
+    padding: 5px;
+    width: 1em;
+    height: 1em;
+    font-size: 10px;
+    border-radius: 50%;
+}
+
+.main-card-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35vh;
+    padding: 1em;
+    width: 18em;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+    border-radius: 2%;
+}
+
+
+
+
+          /* SECTION-1 */
+
+.heading-1{
+    background-color: #252641;
+    margin: 8rem;
+    border-radius: 3rem;
+}
+
+.headings-1-text{
+    align-items: center;
+    padding: 6rem;
+    color:azure;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.headings-1-text h2{
+    font-size: 2.5rem;
+}
+
+.headings-1-text p{
+    font-size: 1.5rem;
+    max-width: 60%;
+    text-align: center;
+}
+.start-learning-now-btn{
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #49BBBD;
+    color: white;
+    border: none;
+}
+
+
+@media (max-width: 768px){
+    .heading-1{
+        margin: 5rem;
+        height: auto;
+        margin: none;
+    }
+    .headings-1-text h2{
+        line-height: 3rem;
+    }
+    .headings-1-text p{
+        display: none;
+    }
+
+}
+
+                      /* SECTION-3 */
+
+.section-3-content{
+    background-color: #9DCCFF;
+    padding: 8rem 10rem 12rem 10rem;
+    position: relative;
+    z-index: 1;
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.student-cards{
+    display: flex;
+    gap: 8rem;
+    justify-content: center;
+    list-style: none;
+
+}
+
+
+.student-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+
+.student-card{
+    width: 20rem;
+    height: 25rem;
+    background-color: aliceblue;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.student-card-content-image{
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+}
+
+.student-card-content h5{
+    font-size: 1.5rem;
+}
+
+.student-card-content p{
+    font-size: 1.3rem;
+    color:#696984;
+}
+
+@media (max-width: 768px){
+    .html {
+        font-size: 55%;
+    }
+    
+    .section-3-content{
+        padding: none;
+    }
+
+    .student-card{
+        width: 100%;
+        height: auto;
+        padding: none;
+    }
+
+    .student-cards{
+        
+        justify-content: none;
+        flex-wrap:wrap
+     
+    }
+}
+
+.section-4-content {
+    background-color: #252641;
+    padding: 6rem 10rem;
+    margin: 0 8rem;
+    border-radius: 2rem;
+    position: relative;
+    z-index: 2;
+    top: -5.5rem;
+    
+}
+
+.section-4-content-text{
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-4-heading {
+     font-size: 2rem;
+     color: #fff;
+}
+
+.section-4-btn{
+      display: flex;
+      gap: 3rem;
+     
+}
+
+.section-4-btn-1{
+    background-color: #29B9E7;
+    color: #fff;
+    padding: 0 2rem;
+    border-radius: 1rem;
+    border: none;
+}
+.section-4-btn-2{
+    padding: 0 2rem;
+    background-color:#49BBBD;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+}
+.section-4-btn-1 img{
+   width: 1.8rem;
+   height: 1.5rem;
+   margin-right: 1rem;
+}
+
+.section-4-btn-2 img{  
+        
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+      
+}
+
+
+@media (max-width: 768px) {
+    .section-4-content {
+        padding: 3rem 3rem;
+        margin: 0 2rem;
+        top: -3rem;
+    }
+
+    .section-4-heading {
+        font-size: 1.8rem;
+    }
+
+    .section-4-btn-1,
+    .section-4-btn-2 {
+        padding: 0.5rem 1.5rem;
+    }
+
+    .section-4-btn img {
+        width: 1.5rem;
+        height: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-4-content {
+        padding: 2rem;
+        margin: 0 1rem;
+        top: -2rem;
+    }
+
+    .section-4-heading {
+        font-size: 1.6rem;
+    }
+
+    .section-4-btn {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .section-4-btn-1,
+    .section-4-btn-2 {
+        padding: 0.5rem 1rem;
+        width: 100%; 
+        justify-content: center;
+    }
+
+    .section-4-btn img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
+
+
+       /* SECTION-5 */
+.section-5-content{
+    padding: 8rem;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    list-style: none;
+
+}
+
+.card{
+    width: 40rem;
+    height: 48rem;
+}
+
+.section-5-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    /* box-shadow: 0.1rem 0.1rem 0.1rem rgb(0 0 0 / 60%); */
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0rem 0.08rem 2.4rem; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2rem;
+    gap: 2rem;
+}  
+
+.card-content-image{
+    width: 35rem;
+    height: 25rem;
+    /* position: center; */
+}
+
+.card-content-text h4{
+    font-size: 2.2rem;
+    margin: 1rem;
+}
+
+.card-content-text p{
+    font-size: 1.4rem;
+     color: #696984;
+}
+
+.card-btn{
+    background-color: #49BBBD;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 2rem;
+    border: none;
+}
+
+@media (max-width: 768px){
+    .cards{
+        flex-wrap: wrap;
+    }
+}
+
+
+
+    /*FOOTER*/
+
+    .footer{
+        background: #252641;
+    }
+    
+    .footer-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color:#FFFFFF;
+        gap: 2rem;
+        padding: 3rem;
+    }
+    
+    .footer-headings{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+    .footer-heading img{
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .line-btn{
+        font-size: 5rem;
+        font-weight:100;
+    }
+    
+    .mid-heading-1{
+        font-size: 2rem;
+    }
+    
+    .mid-heading-2{
+        display: flex;
+        gap:2rem;
+    }
+    
+    .mid-heading-2 input ,button{
+        border-radius: 5rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .subscribe-btn{ 
+        background-color: #49BBBD;
+        cursor: pointer;
+        border:none;
+    }
+    
+    .bottom-text{
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: center;
+    
+        
+    }
+
+
