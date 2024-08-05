@@ -69,8 +69,8 @@ body {
 .navbar-link:visited {
   display: inline-block;
   text-decoration: none;
+  color: #5B5B5B;
   font-size: 2rem;
-  color: white;
   transition: all 0.3s;
 }
 
@@ -212,6 +212,7 @@ body {
     border: none;
     color: white;
     font-weight:700;
+    cursor:pointer;
 }
 .section-1-image{
     margin-top: 2rem;

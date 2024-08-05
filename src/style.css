@@ -48,8 +48,9 @@ input {
 /* Header */
 
 .header {
+    position: fixed;
     padding: 0 4.8rem;
-    height: 4rem;
+    height: 4.5rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -57,6 +58,7 @@ input {
     background-color: var(--primary);
     color: white;
     font-weight: 300;
+    z-index: 3;
 }
 
 
@@ -77,7 +79,9 @@ nav>ul {
     align-items: center;
 }
 
-
+.navbar-link{
+    font-size: 1.2rem;
+}
 
 #navbar-end {
     display: flex;
@@ -97,17 +101,18 @@ nav>ul {
 
 .login-btn {
     border-radius: 0.8rem;
+    cursor: pointer;
 }
 
 .signup-btn {
     border-radius: 0.8rem;
+    cursor: pointer;
 }
 
 .navbar-link:link,
 .navbar-link:visited {
-    display: inline-block;
+    display: inline;
     text-decoration: none;
-    font-size: 2rem;
     color: white;
     transition: all 0.3s;
 }
@@ -117,6 +122,8 @@ nav>ul {
     color: black;
     cursor: pointer;
 }
+
+/* .login-btn , .glass */
 
 
 .mobile-navbar-btn {
@@ -160,7 +167,7 @@ nav>ul {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        z-index: 10;
+        z-index: 100;
 
     }
 

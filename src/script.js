@@ -20,3 +20,12 @@ const subscribe = () => {
     alert("Subscribed");
   })
 }
+
+
+const button = document.querySelector("section-1-content-btn");
+
+const moveto = ()  => {
+  addEventListener('click' , () => {
+    window.location.href = "blogdetails.html";
+  })
+}
